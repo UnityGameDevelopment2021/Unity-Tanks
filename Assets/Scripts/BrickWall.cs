@@ -17,6 +17,8 @@ public class BrickWall : Wall
     /* TODO change collison object name
      */ 
     private void OnCollisionEnter2D(Collision2D collision) {
+
+        /*
         if (collision.gameObject.name == "TestPlayer") {
             PlayerTank playerTank = collision.gameObject.GetComponent<PlayerTank>();
             if (wallHP <= 0) {
@@ -28,6 +30,7 @@ public class BrickWall : Wall
                 spriteRenderer.sprite = sprite;
             }
         }
+        */
     }
 
 }
