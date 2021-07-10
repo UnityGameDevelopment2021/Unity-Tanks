@@ -6,7 +6,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float shellSpeed = 10f;
-    public int shellDamage = 5;
+    public int shellDamage = 1;
     public float shellRange = 10f;
 
     private Vector2 startPosition;
@@ -44,7 +44,11 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(collision.gameObject);
+        //Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) {
+        Destroy(gameObject);
     }
 
 
