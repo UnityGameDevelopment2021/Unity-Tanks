@@ -116,7 +116,11 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
+<<<<<<< HEAD
   m_IsTrigger: 1
+=======
+  m_IsTrigger: 0
+>>>>>>> main
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.000685215, y: 0.0016481876}
@@ -145,5 +149,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shellSpeed: 7
+<<<<<<< HEAD
   shellDamage: 5
+=======
+  shellDamage: 1
+>>>>>>> main
   shellRange: 10

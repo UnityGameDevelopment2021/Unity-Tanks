@@ -17,6 +17,22 @@ public class BrickWall : Wall
     /* TODO change collison object name
      */ 
     private void OnCollisionEnter2D(Collision2D collision) {
+<<<<<<< HEAD
+=======
+
+        if(collision.gameObject.name == "Bullet(Clone)") {
+            Bullet bullet = collision.gameObject.GetComponent<Bullet>();
+            if (wallHP <= 0) {
+                Destroy(gameObject);
+            }
+            else {
+                wallHP -= bullet.shellDamage;
+                sprite = sprites[wallHP];
+                spriteRenderer.sprite = sprite;
+            }
+        }
+
+>>>>>>> main
         /*
         if (collision.gameObject.name == "TestPlayer") {
             PlayerTank playerTank = collision.gameObject.GetComponent<PlayerTank>();

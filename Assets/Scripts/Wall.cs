@@ -10,6 +10,6 @@ public class Wall : MonoBehaviour
     protected BoxCollider2D boxCollider;
     protected SpriteRenderer spriteRenderer;
 
-    protected int wallHP;
+    [SerializeField] protected int wallHP;
 
 }
