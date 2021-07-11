@@ -29,6 +29,13 @@ public class Bullet : MonoBehaviour
         }
     }
 
+    void OnEnable() {
+        GameObject[] waterTiles = GameObject.FindGameObjectsWithTag("Water");
+        foreach (GameObject water in waterTiles) {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), water.gameObject.GetComponent<Collider2D>(), true);
+        }
+    }
+
     private void DisableObject()
     {
         rigid2D.velocity = Vector2.zero;
@@ -44,11 +51,15 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Destroy(gameObject);
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
-        Destroy(gameObject);
+        if (collision.gameObject.name == "Water") {
+            Physics2D.IgnoreCollision(GetComponent<Collider2D>(), collision.gameObject.GetComponent<Collider2D>(), true);
+        }
+        else {
+            Destroy(gameObject);
+        }
     }
 
 
